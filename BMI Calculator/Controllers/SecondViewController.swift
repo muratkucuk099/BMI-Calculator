@@ -9,22 +9,27 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var adviceLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var backgroundColor: UIImageView!
+    var BMIValue = "0.0"
+    var advice = "Try Again!"
+    var color : UIColor = .white
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultLabel.text = BMIValue
+        adviceLabel.text = advice
+        backgroundColor.backgroundColor = color
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func recalculatePress(_ sender: UIButton) {
+     
+        self.dismiss(animated: true)
     }
-    */
+    
+  
 
 }
